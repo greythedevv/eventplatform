@@ -2,19 +2,24 @@ import Explorebtn from '@/components/Explorebtn'
 import { title } from 'process'
 import React from 'react'
 import Eventcard from "@/components/eventcard"
+import {events}from "@/lib/constants"
 
-const events = [
-  {
-    id: 1,
-    image: "/images/event1.png", 
-    title: "Event 1"
-  },
-   {
-    id: 1,
-    image: "/images/event2.png", 
-    title: "Event 2"
-  }
-]
+// const events = [
+//   {
+//     id: 1,
+//     image: "/images/event1.png", 
+//     title: "Event 1",
+//     slug: "event-1",
+//     location: "location-1",
+//     date: "Date-1",
+//     time: "Time-1"
+//   },
+//    {
+//     id: 1,
+//     image: "/images/event2.png", 
+//     title: "Event 2"
+//   }
+// ]
 
 const Home = () => {
   return (
@@ -27,7 +32,7 @@ const Home = () => {
         <ul className='events'>
           {
             events.map((event) => (
-              <li key={event.id} className='event-card'>
+              <li key={event.title} className='event-card'>
                  <Eventcard {...event}/>
               </li>
             ))
