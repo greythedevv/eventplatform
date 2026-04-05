@@ -3,6 +3,7 @@ import { Schibsted_Grotesk, Martian_Mono, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import LightRays from '../components/lightraays';
+import Navbar from "@/components/navbar";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -32,6 +33,7 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", schibsted_Grotesk.variable, martian_Mono.variable, "font-sans", geist.variable)}
     >
       <body className="min-h-full flex flex-col">
+        <Navbar />
         
 
 <div className="absolute inset-0 top-0 z-[-1] min-h-screen">
